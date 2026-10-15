@@ -1,0 +1,171 @@
+\documentclass[8pt]{article}
+\linespread{0.5} 
+\usepackage{extsizes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{ mathrsfs }
+\usepackage{ mathtools}
+\usepackage{enumerate}
+\usepackage{bbm}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+\usepackage{tikz-cd} 
+\usepackage{adjustbox} 
+\usepackage{ stmaryrd }
+\numberwithin{equation}{section}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+\tikzset{commutative diagrams/.cd,
+mysymbol/.style={start anchor=center,end anchor=center,draw=none}
+}
+\newcommand\comsymb[2][\circlearrowleft]{%
+  \arrow[mysymbol]{#2}[description]{#1}}
+
+\newtheorem{theorem}{Theorem} [subsection] 
+\newtheorem{proposition}{Proposition}[subsection] 
+\newtheorem{definition}{Definition}[subsection] 
+\newtheorem{lemma}{Lemma}[subsection] 
+\newtheorem{notation}{Notation}[subsection] 
+\newtheorem{remark}{Remark}[subsection] 
+\newtheorem{corollary}{Corollary} [subsection] 
+\newtheorem{terminology}{Terminology}[subsection] 
+\newtheorem{fact}{Fact}[subsection] 
+\newtheorem{example}{Example}[subsection] 
+\newtheorem{claim}{Claim}
+\newenvironment{claimproof}[1]{\par\noindent\underline{Proof:}\space#1}{\hfill $\blacksquare$}
+
+\DeclareMathOperator{\tmod}{mod}
+\DeclareMathOperator{\triv}{triv}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\straw}{s.t.}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\esssup}{esssup}
+\DeclareMathOperator{\abs}{abs}
+\DeclareMathOperator{\rel}{rel}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Homk}{Hom_{k-alg}}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\Span}{Span}
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\MaxSpec}{MaxSpec}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\PD}{PD}
+\DeclareMathOperator{\ext}{ext}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\inte}{int}
+\DeclareMathOperator{\diverg}{div}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\image}{im}
+\DeclareMathOperator{\dR}{dR}
+\DeclareMathOperator{\Ob}{Ob}
+\DeclareMathOperator{\Mnfd}{Mnfd}
+\DeclareMathOperator{\OpEmb}{OpEmb}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spa}{Spa}
+\DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Alg}{\mathcal{A}}
+\DeclareMathOperator{\glim}{glim}
+\DeclareMathOperator{\con}{con}
+\DeclareMathOperator{\Spv}{Spv}
+\DeclareMathOperator{\clet}{c}
+\DeclareMathOperator{\tat}{at}
+\DeclareMathOperator{\Sheaf}{Sheaf}
+\DeclareMathOperator{\Cont}{Cont}
+%\newcommand*{\name}[\num_arguments][default values]{{\color{#1}\Large #2}}
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\Ouv}{\mathscr{O}}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newcommand{\opNorm}[2]{\norm{#1}_{#2\to#2}}
+\newcommand{\normL}[3]{\norm{#1}_{L^{#2}(#3)}}
+\newcommand{\N}[0]{\mathbb{N}}
+\newcommand{\m}[0]{\mathfrak{m}}
+\newcommand{\R}[0]{\mathbb{R}}
+\newcommand{\Z}[0]{\mathbb{Z}}
+\newcommand{\C}[0]{\mathbb{C}}
+\newcommand{\Q}[0]{\mathbb{Q}}
+\newcommand{\F}[0]{\mathcal{F}}
+\newcommand{\U}[0]{\mathcal{U}}
+\newcommand{\B}[0]{\mathcal{B}}
+\newcommand{\G}[0]{\mathbb{G}}
+\newcommand{\A}[0]{\mathbb{A}}
+\newcommand{\T}[0]{\mathbb{T}}
+\newcommand{\K}[0]{\mathcal{K}}
+\newcommand{\Para}[0]{\mathbb{P}}
+\newcommand{\M}[0]{\mathcal{M}}
+\newcommand{\maniN}[0]{\mathcal{N}}
+\newcommand{\cinf}[0]{\mathcal{C}^\infty}
+\newcommand{\torus}[0]{\mathbb{T}}
+\newcommand{\cR}[0]{\mathcal{R}}
+\newcommand{\sep}[0]{\:|\:}
+\newcommand{\pd}[2]{{\frac {\partial #1} {\partial #2}}}
+\newcommand{\compinc}[0]{\subset \subset}
+\newcommand{\sH}[0]{\mathscr{H}}
+\newcommand{\Nfil}[0]{\mathcal{N}}
+\newcommand{\g}[0]{\mathfrak{g}}
+\newcommand{\p}[0]{\mathfrak{p}}
+\newcommand{\QC}[0]{\mathfrak{Q}_C}
+\newcommand{\ab}[1]{\vert #1 \vert}
+\newcommand{\st}[0]{\:\straw\:}
+\newcommand{\cGamma}[0]{c\Gamma}
+\newcommand{\sC}[0]{\mathscr{C}}
+\newcommand{\sU}[0]{\mathscr{U}}
+\newcommand{\cV}[0]{\mathcal{V}}
+\newcommand{\sA}[0]{\mathscr{A}}
+\newcommand{\sB}[0]{\mathscr{B}}
+\newcommand{\sX}[0]{\mathscr{X}}
+\newcommand{\sS}[0]{\mathscr{S}}
+\newcommand{\sT}[0]{\mathscr{T}}
+\newcommand{\cB}[0]{\mathcal{B}}
+\newcommand{\cA}[0]{\mathcal{A}}
+\newcommand{\cC}[0]{\mathcal{C}}
+\newcommand{\cO}[0]{\mathcal{O}}
+\newcommand{\cT}[0]{\mathcal{T}}
+\newcommand{\cF}[0]{\mathcal{F}}
+\newcommand{\cG}[0]{\mathcal{G}}
+\newcommand{\nat}[0]{\mathrm{nat}}
+\newcommand{\tand}[0]{\text{ and }}
+\newcommand{\tor}[0]{\text{ or }}
+\newcommand{\dcirc}[0]{{\circ\circ}}
+\newcommand{\otherwise}[0]{\text{ otherwise }}
+\newcommand{\Rat}[0]{\mathfrak{Rat}}
+\newcommand{\polring}[1]{[X_1,\cdots,X_{#1}]}
+\newcommand{\compring}[1]{\langle X_1,\cdots,X_{#1}\rangle}
+\newcommand{\fib}[1]{%
+  \mathbin{\mathop{\times}\limits_{#1}}%
+}
+\newcommand{\tens}[1]{%
+  \mathbin{\mathop{\otimes}\displaylimits_{#1}}%
+}
+\newcommand{\comppol}[1]{\langle X_1,\cdots, X_{#1}\rangle}
+
+\title{Rigid Analytic and Adic Geometry}
+\author{Based on Lectures given by\\\\Prof. Dr. Jens Franke}
+\date{WSSe 26/27, University of Bonn}
+
+
+\begin{document}
+\maketitle
+
+%4/13
+\end{document}
