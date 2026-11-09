@@ -114,7 +114,8 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
 \newcommand{\G}[0]{\mathbb{G}}
 \newcommand{\A}[0]{\mathbb{A}}
 \newcommand{\T}[0]{\mathbb{T}}
-\newcommand{\K}[0]{\mathcal{K}}
+\newcommand{\K}[0]{\mathbb{K}}
+\newcommand{\cK}[0]{\mathcal{K}}
 \newcommand{\Para}[0]{\mathbb{P}}
 \newcommand{\M}[0]{\mathcal{M}}
 \newcommand{\maniN}[0]{\mathcal{N}}
@@ -187,7 +188,7 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
     \end{equation*}
 \end{proposition}
 \begin{definition}
-    A point $x\in X$ is a generic point if $\overline{\{x\}} = X$, (i.e. $\{x\}$ is dense in $X$).
+    A point $x\in X$ is a generic point if $\overline{\{x\}} = X$, (i.e., $\{x\}$ is dense in $X$).
 \end{definition}
 \begin{notation}
     For a topological space $X$, we denote the collection of all open sets to be $\Ouv_X$.
@@ -233,7 +234,7 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
 \end{proposition}
 \begin{proposition}
     \label{fact_3}
-    Let $X\stackrel{f}{\to}Y$ be a continuous with $X$ being quasi-compact and $Y$ being Hausdorff, then $f$ is closed (i.e. every closed set $A$ of $X$ has a closed image $f(A)$ in $Y$).
+    Let $X\stackrel{f}{\to}Y$ be a continuous with $X$ being quasi-compact and $Y$ being Hausdorff, then $f$ is closed (i.e., every closed set $A$ of $X$ has a closed image $f(A)$ in $Y$).
 \end{proposition}
 \begin{definition}
     A subset $\mathcal{B}\subseteq\Ouv_X$ is a topology basis for $X$ if for any $U\in\Ouv_X$, we have $U=\bigcup_{V\in\mathcal{B}_U}V$ where $\mathcal{B}_U=\{V\in\mathcal{B}\sep V\subseteq U\}$.
@@ -271,14 +272,14 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
     $\Spec A$ is spectral and every ring homomorphism defines a spectral map and $\{D(f)\sep f\in A\}$ are such base as in Proposition \ref{proposition_2_5} for $\Spec A$.
 \end{example}
 \begin{example}
-    The underlying space of qcqs (i.e. quasi-compact and quasi-separated) scheme is spectral.
+    The underlying space of qcqs (i.e., quasi-compact and quasi-separated) scheme is spectral.
 \end{example}
 \begin{remark}
     \label{remark_example_1_b}
     Every closed and every quasi-compact open sets of a spectral space is spectral.
 \end{remark}
 \begin{remark}
-    A Noetherian space $X$ (i.e. $\QC(X)=\Ouv_X$) is spectral if and only if it is sober.
+    A Noetherian space $X$ (i.e., $\QC(X)=\Ouv_X$) is spectral if and only if it is sober.
 \end{remark}
 \begin{proposition}
     \label{fact_1_2_7}
@@ -393,7 +394,7 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
         \item Every point of accumulation of $\mathcal{G}$ is a point of accumulation of $\F$.
         \item A point $x\in X$ is a limit of $\U$ if and only if it is a point of accumulation of $\U$.
         \item The sets of its limits and its point of accumulations are closed for $\F$.
-        \item Let $\iota:A\to X$ be a canonical inclusion where $A$ has an induced topology from $X$. Then for an ultrafilter $\cF$ on $A$, $\Lim_A\F = A\cap\Lim\iota_*\F$.
+        \item Let $\iota:A\to X$ be a canonical inclusion where $A$ has an induced topology from $X$. Then for an ultrafilter $\cF$ on $A$, $\Lim_A\F = A\cap\Lim_X\iota_*\F$.
     \end{enumerate}
 \end{proposition}
 \begin{proof}
@@ -458,7 +459,7 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
 \end{proposition}
 \begin{proof}$\:$
     \par\textbf{i} $\Rightarrow $\textbf{ii}. This follows from that $f_*\mathcal{N}_x\supseteq\mathcal{N}_{f(x)}$ and $f_*$ preserves inclusion.
-    \par\textbf{ii} $\Rightarrow$ \textbf{iii}. By Proposition \ref{proposition_2_11}, every limit is a point of accumulation.
+    \par\textbf{ii} $\Rightarrow$ \textbf{iii}. If $x$ is a point of accumulation of $\cF$, we may extend $\cF$ to an ultrafilter $\mathcal{U}$ so that $x$ is a limit of it. Since the direct image preserves inclusion and $f(x)\in\Lim f_*\mathcal{U}$ thus it is a point of accumulation of $f_*\mathcal{U}$ by Proposition \ref{proposition_2_11}, $f(x)$ is a point of accumulation of $f_*\cF$. %By Proposition \ref{proposition_2_11}, every limit is a point of accumulation.
     \par\textbf{iii}$\Rightarrow$\textbf{iv}. By Proposition \ref{proposition_2_11}, every point of accumulation of a ultrafilter is a limit of the filter and $f_*$ maps ultrafilters to ultrafilters.
     \par\textbf{iv}$\Rightarrow$\textbf{i}. If $A\subseteq Y$ is closed, we want to show that $f^{-1}(A)$ is closed. Let $\U$ be an ultrafilter in $X$ such that $f^{-1}(A)\in\U$. Then $f_*\U$ is a ultrafilter on $Y$ containing $A$ and by Corollary \ref{corollary_1}, any limit of $f_*\U$ is in $A$. Since limits of $\U$ are mapped to limits of $f_*\U$, $f^{-1}(A)$ contains limits of $\U$. Again by Corollary \ref{corollary_1} \textbf{iii}$\Rightarrow$\textbf{iv}, $f^{-1}(A)$ is closed.
 \end{proof}
@@ -482,13 +483,13 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
 \end{proposition}
 \begin{proof}$\:$
 % REVIEW [major]: Hausdorff implies at most one limit, not "precisely one". In the converse, the filter-base argument is reversed: if no disjoint neighborhoods exist, the intersections form a proper filter base and can be extended to an ultrafilter. [original line 482]
-    \par\textbf{i}$\Rightarrow$\textbf{ii}. If $x\not=y$, they have disjoint neighborhoods $x\in U$ and $y\in V$. If $U\in\F$ and $V\in\F$, then $\emptyset=U\cap V\in\F$, which is not possible. Thus precisely one of $x$ and $y$ is in $\Lim\F$.
+    \par\textbf{i}$\Rightarrow$\textbf{ii}. If $x\not=y$, they have disjoint neighborhoods $x\in U$ and $y\in V$. If $U\in\F$ and $V\in\F$, then $\emptyset=U\cap V\in\F$, which is not possible. Hence $\Lim\F$ has at most $1$ element.
     \par\textbf{ii}$\Rightarrow$\textbf{iii} is trivial.
     \par\textbf{iii}$\Rightarrow$\textbf{i}. Assume $x\not=y$ and consider the set
     \begin{equation*}
     \{U\cap V\sep U\in\Nfil_x,V\in\Nfil_y\}.
     \end{equation*}
-    This is a filter unless it contains $\emptyset$. In that case, it is contained in some ultrafilter $\U$. By definition of limits, $x,y$ are both limits of $\U$ thus $x=y$ which is a contradiction.
+    This is a filterbase unless it contains $\emptyset$. In the former case, it is contained in some ultrafilter $\U$. By definition of limits, $x,y$ are both limits of $\U$ thus $x=y$ which is a contradiction.
 \end{proof}
 \begin{proposition}
     Let $X$ be a topological space. $X$ is quasi-compact if and only if for arbitrary collection of closed sets $(Z_i)_{i\in I}$,
@@ -511,7 +512,7 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
     \begin{equation*}
         \{x\sep x\text{ is a point of accumulation of $\F$}\} = \bigcap_{M\in\F}\overline{M}.
     \end{equation*}
-    By quasi-compactness $X$ and applying it to the complement, this is a finite intersection of elements in $\F$. By definition, any filter is closed under finite intersection and does not contain the emptyset, therefore this is not empty.
+    Suppose not that the above set is empty. By quasi-compactness of $X$, this is a finite intersection of closures of elements in $\F$. By definition, any filter is closed under finite intersection and does not contain the emptyset, therefore a contradiction.
     \par\textbf{ii'}$\Rightarrow$\textbf{iii'}. Every filter is contained in some ultrafilter and limits and points of accumulation are the same in ultrafilter by Proposition \ref{proposition_2_11}.
     \par\textbf{iii'}$\Rightarrow$\textbf{i'}. Let $(A_\lambda)_\Lambda$ be a family of closed subsets such that for any finite subset $F\subseteq\Lambda$, we have,
     \begin{equation*}
@@ -526,12 +527,12 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
 \end{proof}
 \begin{proposition}
     \label{proposition_3}
-    Let $X$ be a quasi-compact topological space such that the set of quasi-compact open subsets forms a topology basis (i.e. as in Proposition \ref{proposition_2_5}), then for every ultrafilter $\U$ on $X$, the closed subset $\Lim\U\subseteq X$ is irreducible.
+    Let $X$ be a quasi-compact topological space such that the set of quasi-compact open subsets forms a topology basis (i.e., as in Proposition \ref{proposition_2_5}), then for every ultrafilter $\U$ on $X$, the closed subset $\Lim\U\subseteq X$ is irreducible.
 \end{proposition}
 \begin{proof}
 % REVIEW [proof]: Restrict the ultrafilter to the quasi-compact open Omega cap Theta via the inclusion-bijection; U cap O_{Omega cap Theta} is not automatically written as an ultrafilter without this justification. [original line 528]
     First $\Lim\U\not=\emptyset$ as $X$ is quasi-compact by Proposition \ref{proposition_2_another}. Let $\Omega,\Theta\in\QC(X)$ such that $\Omega\cap \Lim\U\not=\emptyset$ and $\Theta\cap\Lim\U\not=\emptyset$. That is $\Omega\in\Nfil_x,\Theta\in\Nfil_y$ for some $x,y\in\Lim\U$. Hence, $\Omega,\Theta\in\U$ and thus $\Omega\cap\Theta\in\U$.
-    As $\Omega\cap\Theta$ is quasi-compact $\U\cap\Ouv_{\Omega\cap\Theta}$ has a limit $x\in\Omega\cap\Theta$ by Proposition \ref{proposition_2_another}. By Proposition \ref{proposition_2_11}, $x\in\Lim\U$.
+    As $\Omega\cap\Theta$ is quasi-compact $\U|_{\Omega\cap\Theta}$ has a limit $x\in\Omega\cap\Theta$ by Proposition \ref{proposition_2_another}. By Proposition \ref{proposition_2_11}, $x\in\Lim\U$.
     \par Let $U$ and $V$ be open subsets such that $U\cap\Lim\U$ and $V\cap\Lim\U$ are not empty. By the assumption, there are $\Omega\subseteq U$ and $\Theta\subseteq V$, hence $U\cap V\cap\Lim\U$ is not empty.
 \end{proof}
 
@@ -558,7 +559,7 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
     \end{enumerate}
 \end{proposition}
 \begin{proof}
-    For \textbf{1}. the sufficiency of being $T_0$ follows from that $X$ is Hausdorff by Proposition \ref{proposition_2} and by Definition \ref{definition_2}. If $x$ and $y$ are topologically indistinguishable, then $\overline{\{x\}} = \overline{\{y\}} =Z$ for some $Z$. Furthermore, the principal filter $\mathcal{P}_x$ of $x$ which has $\Lim\mathcal{P}_x = Z$ from Example \ref{example_3} has both $x$ and $y$ as generic limits, therefore $x=y$.
+    \textbf{1}. The sufficiency of being $T_0$ follows from that $X$ is Hausdorff by Proposition \ref{proposition_2} and by Definition \ref{definition_2}. If $x$ and $y$ are topologically indistinguishable, then $\overline{\{x\}} = \overline{\{y\}} =Z$ for some $Z$. Furthermore, the principal filter $\mathcal{P}_x$ of $x$ which has $\Lim\mathcal{P}_x = Z$ from Example \ref{example_3} has both $x$ and $y$ as generic limits, therefore $x=y$.
     \par \textbf{2}. Irreducibility of $Z$ implies that $\Ouv_Z\backslash\{\emptyset\}$ is a filter base in $X$. Hence it is contained in some ultrafilter $\U$. By Definition \ref{definition_10} and the closedness of $Z$ implies $Z=\lim\U$. Hence every $\glim\U$ is a generic point of $Z$.
 \end{proof}
 \begin{proposition}
@@ -571,23 +572,23 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
 \end{proposition}
 \begin{proof}
 % REVIEW [notation/proof]: The assumption should be M_I in U, not M. Later glim of an ultrafilter on V is used without having defined it; instead take g=glim_X(i_*V). [original line 567]
-    For \textbf{1}, let $(M_i)_{i\in I}$ be the collection of subsets closed under $\glim$. Then, if $M_I = \bigcap_{i\in I}M_i$, $M\in\U$, we have,
+    For \textbf{1}, let $(M_i)_{i\in I}$ be the collection of subsets closed under $\glim$. Then, if for $M_I = \bigcap_{i\in I}M_i$, $M_I\in\U$, then we have,
     \begin{equation*}
     \forall i\in I, M_I\subseteq M_i \Rightarrow M_i\in\U.
     \end{equation*}
     Therefore for each $i\in I$, $\glim\U\in M_i$. Thus $\glim\U\in M_I$.
     \par If $M\cup N\in\U$ then $M\in\U$ or $N\in\U$ by Proposition \ref{fact_8}. Hence $\glim\U\in M\subseteq M\cup N$ or $\glim\U\in N\subseteq M\cup N$.
-    \par Let $\mathcal{V}$ be an ultrafilter on $V$ and $\mathcal{U}$ be the image of $\mathcal{V}$ under the embedding $V\hookrightarrow X$. If $V$ is closed under $\glim$ then $\glim\mathcal{V}\in V$ is a limit of $\U$ as
+    \par Let $\mathcal{V}$ be an ultrafilter on $V$ and $\mathcal{U}\defeq\iota_*\cV$ be the image of $\mathcal{V}$ under the embedding $\iota:V\hookrightarrow X$. If $V$ is closed under $\glim$ then $\glim_V\mathcal{V}\in V$ is a limit of $\U$ as
     \begin{equation*}
-    \Lim\mathcal{V} = V\cap\Lim\U
+    \Lim_V\mathcal{V} = V\cap\Lim_X\U
     \end{equation*}
     by Proposition \ref{proposition_2_11}.
-    Under the bijection of Proposition \ref{proposition_bijection_ultrafilters}, every ultrafilter of $V$ admits a limit and by Proposition \ref{proposition_2}, $V$ is quasi-compact. Conversely, if $V$ is quasi-compact, $\mathcal{V}$ has a limit $x\in V$ and $x\in\Lim\mathcal{V} = V\cap\Lim\mathcal{U}$ by Proposition \ref{proposition_2_11}. Let $y\in X$ be such that $x\in\overline{\{y\}}$ hence $y\in V$. Therefore $V$ is closed under $\glim$.
+    Under the bijection of Proposition \ref{proposition_bijection_ultrafilters}, every ultrafilter of $V$ admits a limit and by Proposition \ref{proposition_2}, $V$ is quasi-compact. Conversely, if $V$ is quasi-compact, $\mathcal{V}$ has a limit $x\in V$ and $x\in\Lim_V\mathcal{V} = V\cap\Lim_X\mathcal{U}$ by Proposition \ref{proposition_2_11}. Let $y\in X$ be such that $x\in\overline{\{y\}}$ hence $y\in V$. Therefore $V$ is closed under $\glim$.
 \end{proof}
 
 \begin{definition}
 % REVIEW [definition]: This "quasi-separated" condition is automatic for spectral spaces by the preceding proposition, so either the term/ambient class is wrong or the definition is redundant. [original line 582]
-    A spectral space $X$ is quasi-separated if for any ultrafilter $\U$ on $X$, if $\Lim\U$ is non-empty implies that $\Lim\U$ is an irreducible closed subset.
+    A spectral space $X$ is quasi-separated if for any ultrafilter $\U$ on $X$, $\Lim\U$ is non-empty implies that $\Lim\U$ is an irreducible closed subset.
 \end{definition}
 
 \begin{proposition}$\:$
@@ -599,7 +600,7 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
         \end{equation*}
         is a topology base.
         \item An open subset of a spectral space $X$ is quasi-compact if and only if it is closed under $\glim$.
-        \item A map $f:X\to Y$ is spectral if and only if it is continuous and $\glim_Y f_*\U = f(\glim_X\U)$ for every ultrafilter $\U$ on $X$. (This is proved by the above assertion).
+        \item A map $f:X\to Y$ is spectral if and only if it is continuous and $\glim_Y f_*\U = f(\glim_X\U)$ for every ultrafilter $\U$ on $X$.%(This is proved by the above assertion).
     \end{enumerate}
 \end{proposition}
 
@@ -608,11 +609,14 @@ A neighborhood filter $\mathcal{N}_x$ of $x\in X$ is such that
     \par By Proposition \ref{fact_14_b}, one has $\mathfrak{O}=\QC(X)$ and this is a topology base by the spectrality of $X$. If any ultrafilter has a unique generic limit, then $X$ is $T_0$ and every closed, in particular, irreducible subset contains a generic point by Proposition \ref{fact_14_a}. By Proposition \ref{fact_14_b} $\mathfrak{O}=\QC(X)$ and it is closed under finite intersection
     in $X$. Therefore $X$ is spectral. \textbf{2} follows from \textbf{1} and Proposition \ref{fact_14_b}.
     \par For \textbf{3}, $\Rightarrow$ immediately follows from Proposition \ref{fact_14_b}. Let $\Omega\subseteq Y$ be open and $\U$ be an ultrafilter on $X$.
-    \begin{equation*}
-        \glim_Yf_*\U\in\Omega\Leftrightarrow \Omega\in f_*\U\Leftrightarrow f^{-1}(\Omega)\in\U\Leftrightarrow \glim_X\U\in f^{-1}(\Omega)\Leftrightarrow f(\glim_X\U)\in\Omega.
-    \end{equation*}
+    \begin{align*}
+        \glim_Yf_*\U\in\Omega&\Leftrightarrow \Omega\in f_*\U\\
+        &\Leftrightarrow f^{-1}(\Omega)\in\U\\
+        &\Leftrightarrow \glim_X\U\in f^{-1}(\Omega)\\
+        &\Leftrightarrow f(\glim_X\U)\in\Omega.
+    \end{align*}
 % REVIEW [logic]: Topological distinguishability here is in Y, so the final T0 argument must use Y, not X. [original line 606]
-    Therefore $\glim_Yf_*\U$ and $f(\glim_X\U)$ are topologically indistinguishable. As $X$ is $T_0$, they must coincide.
+    Therefore $\glim_Yf_*\U$ and $f(\glim_X\U)$ are topologically indistinguishable. As $Y$ is $T_0$, they must coincide.
 \end{proof}
 
 \begin{lemma}
@@ -640,7 +644,7 @@ We omit the hard part which is $\Rightarrow$ direction (the existence of such ri
     \mathfrak{g}_\U \defeq \{a\in A\sep V(a)\in\U\} = \{a\in A\sep \{\mathfrak{p}\in\Spec A\sep a\in\mathfrak{p}\}\in\U\}.
 \end{equation*}
 % REVIEW [type error]: V(a_2) is a subset of Spec(A), so the intended assertion is V(a_2) notin U, not V(a_2) notin g_U. Also verify 0 and closure under multiplication by A before declaring g_U an ideal. [original line 633]
- We show $\mathfrak{g}_\U\in\Spec A$. Let $a_1,a_2\in\mathfrak{g}_\U$. Then $V(a_1),V(a_2)\in\U$. As $V(a_1,a_2)\subseteq V(a_1+a_2)$ and $\U$ is closed under finite intersections, $V(a_1+a_2)\in\U$. In particular $a_1+a_2\in\g_\U$ hence it is an ideal. Now suppose $a_1a_2\in\g_\U$ but $a_2\not\in\g_\U$. Then $V(a_2)\not\in\g_\U$ but $V(a_1a_2) = V(a_1)\cup V(a_2)\in\U$. Thus $V(a_1)\in\U$ that is $a_1\in\g_\U$ i.e. it is prime.
+ We show $\mathfrak{g}_\U\in\Spec A$. Let $a_1,a_2\in\mathfrak{g}_\U$. Then $V(a_1),V(a_2)\in\U$. As $V(a_1,a_2)\subseteq V(a_1+a_2)$ and $\U$ is closed under finite intersections, $V(a_1+a_2)\in\U$. In particular $a_1+a_2\in\g_\U$ hence it is an ideal. Now suppose $a_1a_2\in\g_\U$ but $a_2\not\in\g_\U$. Then $V(a_2)\not\in\U$ but $V(a_1a_2) = V(a_1)\cup V(a_2)\in\U$. Thus $V(a_1)\in\U$ that is $a_1\in\g_\U$ i.e., it is prime.
 \par Recall that principal open subsets form a topology basis of $\Spec A$. Since $X=V(f)\cup D(f)$, and that
 \begin{equation*}
 \g_\U\in D(f) \Leftrightarrow f\not\in\g_\U \Leftrightarrow V(f)\not\in \U \Leftrightarrow D(f)\in\U.
@@ -684,10 +688,10 @@ By Lemma \ref{lemma_1}, $\mathfrak{g}_\U=\glim\U$ and all $D(f)$ are $\glim$-clo
 \end{remark}
 \begin{lemma}
     \label{lemma_complement_glim_stability}
-    Let $X$ be a spectral space and $M\subseteq X$ be a subset. If $M$ is closed under $\glim$ then so is $X\backslash M$.
+    Let $X$ be a spectral space and $M\subseteq X$ be an open subset. If $M$ is closed under $\glim$ then so is $X\backslash M$.
 \end{lemma}
 \begin{proof}
-    Omitted.
+    Let $\U$ be an ultrafilter on $X$ such that $X\backslash M\in\U$. Suppose $g=\glim_X\U\in M$. Hence by definition $M\in\U$ but this is a contradiction.
 \end{proof}
 \begin{proposition}
     \label{proposition_5}
@@ -697,8 +701,7 @@ By Lemma \ref{lemma_1}, $\mathfrak{g}_\U=\glim\U$ and all $D(f)$ are $\glim$-clo
         \item $\mathfrak{M} = \{M\subseteq X\sep \text{$M$ is closed under generic limits of ultrafilters}\}$.
     \end{enumerate}
     Let $\mathcal{K}_X$ be this boolean algebra of subsets of $X$. The topology on $X$ obtained by taking $\mathcal{K}_X$ as a topology base coincides with the one for which taking the subsets $M\subseteq X$ which are closed under $\glim$ of ultrafilters as closed subsets.
-    \par Finally let $X_{\con}$ be $X$ equipped with this topology. Then $X_{\con}$ is a spectral hausdorff space (i.e. $X_{\con}$ as in Corollary \ref{corollary_2}), and $X_{\con}\stackrel{\id_X}{\to}X$ is a spectral map.
-    \par For every ultrafilter $\U$ of $X$, $\lim_{X_{\con}}\U=\glim_X\U$.
+    \par Finally let $X_{\con}$ be $X$ equipped with this topology. Then $X_{\con}$ is a spectral hausdorff space (i.e., $X_{\con}$ as in Corollary \ref{corollary_2}), and $X_{\con}\stackrel{\id_X}{\to}X$ is a spectral map. For every ultrafilter $\U$ of $X$, $\lim_{X_{\con}}\U=\glim_X\U$.
 \end{proposition}
 \begin{proof}[Proof:(Caution : This is not required for the exam)]$\:$
 Let $\mathcal{K}_1$ be th boolean algebra generated by $\QC(X)$ and $\mathcal{K}_2$ be the boolean algebra generated by $\mathfrak{M}$. By Lemma \ref{lemma_complement_glim_stability}, we see,
@@ -706,34 +709,34 @@ Let $\mathcal{K}_1$ be th boolean algebra generated by $\QC(X)$ and $\mathcal{K}
     \mathcal{K}_2 \defeq \{M\sep \text{$M$ and $X\backslash M$ closed under $\glim$}\}.
 \end{equation*}
 By Proposition \ref{fact_14_b}, $\mathcal{K}_2$ is a Boolean algebra (note that $\emptyset$ is closed under $\glim$ as no ultrafilter contains it). By Proposition \ref{proposition_4} b), and Corollary \ref{corollary_1}, $\QC(X)\subseteq\mathcal{K}_2$, hence we have an inclusion $\mathcal{K}_1\subseteq\mathcal{K}_2$.
-Let $X_1$ be the topological space with underlying space $X$ and the topology generated by $\K_1$. Let $X_2$ be the topological space again with the same underlying set such that for a subset $A\subseteq X$ is closed if and only if it is closed under $\glim$ of ultrafilters.
+Let $X_1$ be the topological space with underlying space $X$ and the topology generated by $\cK_1$. Let $X_2$ be the topological space again with the same underlying set such that for a subset $A\subseteq X$ is closed if and only if it is closed under $\glim$ of ultrafilters.
 % REVIEW [notation]: K_x should be K_1 in this constructible-topology proof. [original line 700]
-By Proposition \ref{fact_14_b}, $X_2$ is indeed a topological space. Since $\K_x\subseteq \K_2$, $X_2$ is finer or equal to $X_1$.
-\par We first show that the space $X_1$ is Hausdorff. As $X$ is $T_0$, if $x\not=y$ then without loss of generality exchanging $x$ and $y$ if necessary, there is $U\in\Ouv_X$ such that $x\in U$ and $y\not\in U$. As $\QC(X)$ is a topology base, hence without loss of $U\in\QC(X)$. Then $U\in\K_X$ and $X\backslash U\in\K_1$ and they are distinguished neighborhoods of $x$ and $y$ in $X_1$.
+By Proposition \ref{fact_14_b}, $X_2$ is indeed a topological space. Since $\cK_1\subseteq \cK_2$, $X_2$ is finer or equal to $X_1$.
+\par We first show that the space $X_1$ is Hausdorff. As $X$ is $T_0$, if $x\not=y$ then without loss of generality exchanging $x$ and $y$ if necessary, there is $U\in\Ouv_X$ such that $x\in U$ and $y\not\in U$. As $\QC(X)$ is a topology base, hence without loss of $U\in\QC(X)$. Then $U\in\cK_X$ and $X\backslash U\in\cK_1$ and they are distinguished neighborhoods of $x$ and $y$ in $X_1$.
 Moreover, we can show that $X_2$ is quasi-compact. Indeed if we consider $\iota_2:X_2\to X$ a canonical bijection, then $\iota_2$ is continuous. Let $\U$ be an ultrafilter of $X_2$, then $\iota_2*\U$ is also an ultrafilter of $X$ thus admits a limit. Therefore, $\U$ admits a limit and by Proposition \ref{proposition_2_another}, $X_2$ is quasi-compact.
 \par Now we can use Proposition \ref{fact_3} and the fact that a bijective closed map is a homeomorphism. Consider the map $\id_X:X_2\to X_1$. As $X_2=X_1$ and $X_2$ has finer topology than $X_1$, this is continuous. As $X_2$ quasi-compact and $X_1$ Hausdorff, by Proposition \ref{fact_3} this is closed. Therefore topologies coincide.
-\par Let $X_{\con}=X_1=X_2$. Note that $X_{\con}$ is compact thus every ultrafilter admits only a single limit. Let $\Omega\in\K_2$ then by Corollary \ref{corollary_1}, $\Omega$ is clopen in $X_{\con}$. Since $\K_1$ is a topology base, $\Omega$ is a union of elements of $\K_1$ and $\Omega\in\QC(X_{\con})$, the union can be chosen to be finite. Therefore, $\Omega\in\K_1$ as $\K_1$ is a Boolean algebra.
-\par We will now set, $\K_X=\K_1=\K_2$. Since the elements of $\K_X$ are clopen and $\K_X$ is a topology base for $X_{\con}$, and $X_{\con}$ compact, $X_{\con}$ is spectral by Corollary \ref{corollary_3}. Finally, by the definition of topology on $X_{\con}$, any quasi-compact set in $X$ is again quasi-compact in $X_{\con}$ thus $\id:X_{\con}\to X$ is spectral.
+\par Let $X_{\con}=X_1=X_2$. Note that $X_{\con}$ is compact thus every ultrafilter admits only a single limit. Let $\Omega\in\cK_2$ then by Corollary \ref{corollary_1}, $\Omega$ is clopen in $X_{\con}$. Since $\cK_1$ is a topology base, $\Omega$ is a union of elements of $\cK_1$ and $\Omega\in\QC(X_{\con})$, the union can be chosen to be finite. Therefore, $\Omega\in\cK_1$ as $\cK_1$ is a Boolean algebra.
+\par We will now set, $\cK_X=\cK_1=\cK_2$. Since the elements of $\cK_X$ are clopen and $\cK_X$ is a topology base for $X_{\con}$, and $X_{\con}$ compact, $X_{\con}$ is spectral by Corollary \ref{corollary_3}. Finally, by the definition of topology on $X_{\con}$, any quasi-compact set in $X$ is again quasi-compact in $X_{\con}$ thus $\id:X_{\con}\to X$ is spectral.
 \end{proof}
 
 \begin{definition}
     \label{definition_13}
-    $X_{\con}$ is called the constructible topology on $X$ and the elements of $\K_X$ are called constructible subsets.
+    $X_{\con}$ is called the constructible topology on $X$ and the elements of $\cK_X$ are called constructible subsets.
 \end{definition}
 \begin{corollary}
     \label{corollary_4}
-    A subset of $X$ is an element of $\K_X$ if and only if it is clopen in $X_{\con}$.
+    A subset of $X$ is an element of $\cK_X$ if and only if it is clopen in $X_{\con}$.
 \end{corollary}
 \begin{corollary}
     A map $X\stackrel{f}{\to}Y$ between spectral spaces is spectral if and only if it is continuous and $X_{\con}\stackrel{f}{\to}Y_{\con}$ is also continuous.
 \end{corollary}
 \begin{corollary}
     \label{corollary_15}
-    For a spectral space $X$, $\QC(X) = \Ouv_X\cap\K_X$.
+    For a spectral space $X$, $\QC(X) = \Ouv_X\cap\cK_X$.
 \end{corollary}
 \begin{definition}
     \label{definition_14}
-    Let $X$ be a spectral. We say that $x\in X$ is a specialization of $y\in X$ and conversely $y$ is a generalization of $x$ if $x\in\overline{\{y\}}$. We denote such relation by $x\preceq y$.
+    Let $X$ be a spectral space. We say that $x\in X$ is a specialization of $y\in X$ and conversely $y$ is a generalization of $x$ if $x\in\overline{\{y\}}$. We denote such relation by $x\preceq y$.
 \end{definition}
 \begin{proposition}$\:$
     \label{proposition_6}
@@ -920,7 +923,7 @@ By taking complement, we see 1$\Leftrightarrow$2 and 3$\Rightarrow$1. Thus enoug
     \begin{align*}
         \mathcal{R}(1|) &= \Spv(R),\\
 % REVIEW [index]: In the rational-intersection formula use 0<=i<=m and 0<=j<=n (not n for both). [original line 909]
-        \mathcal{R}(r_0|r_1,\cdots,r_m)\cap\mathcal{R}(s_0|s_1,\cdots,s_n) &= \mathcal{R}(r_0s_0|r_is_j,0\leq i\leq n,0\leq j\leq n).
+        \mathcal{R}(r_0|r_1,\cdots,r_m)\cap\mathcal{R}(s_0|s_1,\cdots,s_n) &= \mathcal{R}(r_0s_0|r_is_j,0\leq i\leq m,0\leq j\leq n).
     \end{align*}
     If you assume $m\leq 1$ or even $m=1$, you only get a topology subbase.
 \end{remark}
@@ -946,7 +949,7 @@ This would work and was shown by Huber. This approach will not be taken in this 
     Suppose $X_\lambda\not=\emptyset$ for all $\lambda\in\Lambda$.
     \begin{enumerate}
         \item If $\U=\{\Theta\subseteq\Lambda\sep\lambda_0\in\Theta\}$ is the principal ultrafilter belonging to $\lambda_0$, then $\prod_\U X_\lambda=X_{\lambda_0}$.
-        \item If $F$ is a finite set and all $\lambda\in\Lambda,X_\lambda=F$. Then $\prod_\U F = F$ as for an arbitrary $x\in\prod_\U F$, $\Lambda = \bigcup_{f\in F}\{\lambda\sep x_\lambda =f\}$ (i.e. disjoint finite union) hence there is precisely one $f\in F$ such that $\{\lambda\sep x_\lambda=f\}\in\U$.
+        \item If $F$ is a finite set and all $\lambda\in\Lambda,X_\lambda=F$. Then $\prod_\U F = F$ as for an arbitrary $x\in\prod_\U F$, $\Lambda = \bigcup_{f\in F}\{\lambda\sep x_\lambda =f\}$ (i.e., disjoint finite union) hence there is precisely one $f\in F$ such that $\{\lambda\sep x_\lambda=f\}\in\U$.
         \item If $X_\lambda = X_\lambda'\cup X_\lambda^{''}$ (disjoint unions, $\forall \lambda\in\Lambda, X_\lambda',X^{''}_\lambda\not=\emptyset$) Then $\prod_{\U}(X'_\lambda\cup X^{''}_\lambda) = (\prod_\U X_\lambda')\cup(\prod_\U X^{''}_\lambda)$ which is also a disjoint union as $\Lambda = \{\lambda\in\Lambda\sep x_\lambda\in X_\lambda'\}\cup\{\lambda\in\Lambda\sep x_\lambda\in X_\lambda^{''}\}$.
         \item Then $\prod_\U(\Gamma_\lambda\cup\{0\}) = (\prod_\U\Gamma_\lambda)\cup\{0\}$ and $\prod_\U\Gamma_\lambda$ is an ordered abelian group where all $\Gamma_\lambda$ are ordered abelian groups.
     \end{enumerate}
@@ -1016,7 +1019,7 @@ This would work and was shown by Huber. This approach will not be taken in this 
         \Spv(R/I) = V_{\Spv(R)}(I) &\defeq\{x\in\Spv(R)\sep \supp x\supseteq I\},\\
         & = \Spv(R)\backslash\bigcup_{f\in I}\cR(f).\label{eq_spr_v_formula}
     \end{align}
-    If $I$ is finitely generated (i.e. $I = \langle g_1,\cdots,g_m\rangle_R$), then the right hand side of Equation \eqref{eq_spr_v_formula} can be written as,
+    If $I$ is finitely generated (i.e., $I = \langle g_1,\cdots,g_m\rangle_R$), then the right hand side of Equation \eqref{eq_spr_v_formula} can be written as,
     \begin{equation*}
 % REVIEW [major]: Quotient spectrum has the wrong complement. For I=(g_1,...,g_m), Spv(R/I)=Spv(R)\(union_i R(g_i|)), equivalently intersection_i V(g_i). [original line 1006]
         \Spv(R/I) = \bigcup_{i=1}^m \cR(g_i)
@@ -1452,7 +1455,7 @@ Let $\sC$ be a category. In the application we are interested in, it will be giv
     \label{definition_8_2}
     A Grothendieck topology on $\sC$ is a collection $(\mathcal{T}_X)_{X\in\Ob(\sC)}$ of $X$-sieves (where $\mathcal{T}_X$ being called the class of covering sieves of $X$) satisfying the following conditions.
     \begin{enumerate}[I.]
-        \item (GT-Triv) The all-sieve $\sS$ on $X$ (i.e. the class of all morphisms with its target to $X$) is in $\mathcal{T}_X$.
+        \item (GT-Triv) The all-sieve $\sS$ on $X$ (i.e., the class of all morphisms with its target to $X$) is in $\mathcal{T}_X$.
         \item (GT-Trans) If $\sS\in\mathcal{T}_X$, then for any morphism $Y\stackrel{\nu}{\to}X$ in $\sC$, we have $ \nu^*\sS\in\mathcal{T}_Y$.
         \item (GT-Loc) Let $\mathscr{T}$ be a $X$-sieve. If there is $\sS\in\mathcal{T}_X$ such that $\nu^*\mathscr{T}\in\mathcal{T}_U$ for any morphism $(U\stackrel{\nu}{\to}X)\in\sS$, then $\mathscr{T}\in\mathcal{T}_X$.
     \end{enumerate}
@@ -1538,7 +1541,7 @@ From now on, $\sC$ will be given by some topology base $\mathcal{B}$ in a topolo
     \begin{equation*}
         [U_1,\cdots,U_n]\vDash U.
     \end{equation*}
-    (i.e. every covering sieve of $U$ has a finitely generated covering subsieve).
+    (i.e., every covering sieve of $U$ has a finitely generated covering subsieve).
 \end{definition}
 \begin{example}
     If $X$ is a $T_0$-space it gets the structure of a $G_+$-space by
@@ -1630,7 +1633,7 @@ From now on, $\sC$ will be given by some topology base $\mathcal{B}$ in a topolo
     \begin{enumerate}[a.]
         \item If $\sS\vDash U$ then $U^*=\bigcup_{V\in\sS}V^*$.
         \item If $\cB$ is a $G_+$-base then $\cB^*=\{\Omega^*\sep \Omega\in\cB\}$ is a topology base for $X^*$.
-        \item $\xi\in X^*$ is a specialization (i.e. $\xi\in\overline{\{u\}}$ of $u\in X^*$ ) if and only if $\xi\subseteq u$.
+        \item $\xi\in X^*$ is a specialization (i.e., $\xi\in\overline{\{u\}}$ of $u\in X^*$ ) if and only if $\xi\subseteq u$.
         \item If $\sS$ is a $X$-sieve which is maximal with respect to inclusion among all non-admissible $X$-sieves. Then $\xi=\Ouv_U\backslash\sS$ is a closed point of $X^*$.
     \end{enumerate}
 \end{proposition}
@@ -2067,7 +2070,7 @@ They come with an exception such that
 when $a\in\supp v$. They are subgroups of $(A,+)$.
 \begin{lemma}
     \label{lemma_fact_12_1}
-    Let $G$ be a topological group and $H\subseteq G$ be a subgroup. Then $H$ is open if and only if $H$ is a neighborhood of the identity (i.e. $H$ contains an open neighborhood of $0$).
+    Let $G$ be a topological group and $H\subseteq G$ be a subgroup. Then $H$ is open if and only if $H$ is a neighborhood of the identity (i.e., $H$ contains an open neighborhood of $0$).
 \end{lemma}
 \begin{proof}
     Let $e_G\in U\subseteq H$ be an open neighborhood. Then,
@@ -3153,7 +3156,7 @@ We start with the special case of a topological localization of $A^\triangleleft
     Let $C$ be a complete nat ring with a countable neighborhood base of $0$, $J_0\subseteq C$ be a closed ideal, and $f\in C$ such that $C\stackrel{f}{\to}C$ is an open map. Let $J = \bigcup_{j=0}^\infty (J_0:f^j)$ and $\overline{J}$ be the closure of $J$ in $C$. The following statements hold.
     \begin{enumerate}[a.]
     \item $B=C/\overline{J}$ is a complete nat ring and $B\stackrel{f\tmod\overline{J}}{\to}B$ is an injective open map.
-    \item $C\to B$ has the universal property for morphisms $C\stackrel{\tau}{\to}T$ to complete topological rings such that $\tau(J_0)=0$ and $T\stackrel{\tau(f)}{\to}T$ is injective. (i.e. such $\tau$ factors through $C\to B$)
+    \item $C\to B$ has the universal property for morphisms $C\stackrel{\tau}{\to}T$ to complete topological rings such that $\tau(J_0)=0$ and $T\stackrel{\tau(f)}{\to}T$ is injective. (i.e., such $\tau$ factors through $C\to B$)
     \item $C$ is Huber, Tate, or analytic then so is $B$.
     \end{enumerate}
 \end{corollary}
@@ -3224,7 +3227,7 @@ If $A\stackrel{\tau}{\to}T$ is a morphism of topological rings and $\tau(f)\in T
         \item If $C\subseteq A$ is an open subring, $C[X_1,\cdots,X_n]$ is an open subring of $A[X_1,\cdots,X_n]$.
         \item If $A$ is Huber(Tate, analytic), then so is $A[X_1,\cdots,X_n]$.
         \item If $(C,I)$ is a pair of definition for $A$, $(C[X_1,\cdots,X_n],I[X_1,\cdots,X_n])$ is also a pair of definition for $A[X_1,\cdots,X_n]$.
-        \item If $(s_1,\cdots,s_n)\in (A^{\dcirc})^n$ generates $A$ as an ideal (i.e. $\langle s_1,\cdots,s_n\rangle_A =A$) then they generate $A[X_1,\cdots,X_n]$ in $A[X_1,\cdots,X_n]$.
+        \item If $(s_1,\cdots,s_n)\in (A^{\dcirc})^n$ generates $A$ as an ideal (i.e., $\langle s_1,\cdots,s_n\rangle_A =A$) then they generate $A[X_1,\cdots,X_n]$ in $A[X_1,\cdots,X_n]$.
         \item If $(b_i)_{i=1}^n$ are powerbounded in $B$, then the homomorphism,
         \begin{equation*}
             A[X_1,\cdots,X_n]\ni p\mapsto p(b_1,\cdots,b_n)\in B,
@@ -3393,7 +3396,7 @@ If $A\stackrel{\tau}{\to}T$ is a morphism of topological rings and $\tau(f)\in T
         B^\triangleleft \defeq \left(A^\triangleleft\comppol{m}/J\right)[f_0^{-1}],
     \end{equation*}
     and $B^+$ to be the integral closure of $A^+\comppol{m}+J$ in the localization.
-    \par $A^\triangleleft\comppol{m}$ is complete by definition and Huber by Proposition \ref{proposition_20_3}.c. By Corollary \ref{corollary_18_1}, $A^\triangleleft\comppol{m}/J$ is again complete and Huber. Using Proposition \ref{proposition_18_2}, $B^\triangleleft$ is complete and Huber. Using Proposition \ref{proposition_20_3}.b and Proposition \ref{proposition_18_2}, we see that $A^+\comppol{m}+J$ is open. Since $A^+\comppol{m}+J\subseteq B^+$ (i.e. it contains an open subring), $B^+$ is also open.
+    \par $A^\triangleleft\comppol{m}$ is complete by definition and Huber by Proposition \ref{proposition_20_3}.c. By Corollary \ref{corollary_18_1}, $A^\triangleleft\comppol{m}/J$ is again complete and Huber. Using Proposition \ref{proposition_18_2}, $B^\triangleleft$ is complete and Huber. Using Proposition \ref{proposition_20_3}.b and Proposition \ref{proposition_18_2}, we see that $A^+\comppol{m}+J$ is open. Since $A^+\comppol{m}+J\subseteq B^+$ (i.e., it contains an open subring), $B^+$ is also open.
     Furthermore,
     \begin{equation}
         \label{equation_open_embedding}
@@ -3638,17 +3641,28 @@ is bijective using the definition and the bijectivity of $\beta$. Thus the compo
 
 \begin{lemma}
     \label{lemma_26_1}
-    Let $R$ be a (discrete topology) ring, $I\subseteq R$ be a nilpotent ideal, $M$ be a $R$-module, $P = \sum_{i=0}^NP_iT^i\in R[T]$, and $d\in\N$ such tha $P_d\in R^\times$ and $P_j\in I$ for any $j>d$. 
+    Let $R$ be a ring with the discrete topology. Given 
+    \begin{enumerate}
+      \item $I\subseteq R$ a nilpotent ideal,
+      \item $M$, a $R$-module,
+      \item $P(T) = \sum_{i=0}^NP_iT^i\in R[T]$,
+      \item $d\in\N$,
+    \end{enumerate}
+    such that 
+    \begin{equation*}
+      P_d\in R^\times, l>d\Rightarrow P_l\in I.
+    \end{equation*}
+    %Let $R$ be a (discrete topology) ring, $I\subseteq R$ be a nilpotent ideal, $M$ be a $R$-module, $P = \sum_{i=0}^NP_iT^i\in R[T]$, and $d\in\N$ such tha $P_d\in R^\times$ and $P_j\in I$ for any $j>d$. 
     Then 
     \begin{equation*}
-        M^d\ni(m_0,\cdots,m_{d-1})\mapsto \left(\sum_{i=0}^{d-1}m_iT^i\right)\mod PM[T] \in M[T]/P\cdot M[T].
+        M^d\ni(m_0,\cdots,m_{d-1})\mapsto \left(\sum_{i=0}^{d-1}m_iT^i\right)\mod (P)_{M[T]} \in M[T]/(P)_{M[T]}.
     \end{equation*}
     is bijective.
 \end{lemma}
 
 \begin{proof}
-    The proof proceeds induction on $k$ such that $I^{k} = 0$. If this holds with $k=0$, then $I=0$< hence $P_i=0$ for $i>d$ and since $P_d$ is a unit in $R$, the assertion is a straitforward polynomial division with remainders.
-    \par Let $I^k = 0$ with $k>$ and suppose the assertion is shown for $R'$ and $I'$ with $I^{k-1} = 0$. In particular, it holds for $R' = R/I^{k-1}$, $I' = I/I^{k-1}$ and the image of $P$ in $R'$. Let $M' = IM, M'' = M/M'$. These are $R'$-modules and the claim holds for them. 
+    The proof proceeds induction on $k$ such that $I^{k} = 0$. If this holds with $k=0$, then $I=0$ hence $P_i=0$ for $i>d$ and since $P_d$ is a unit in $R$, the assertion is a straitforward polynomial division with remainders.
+    \par Let $I^k = 0$ with $k>0$ and suppose the assertion is shown for $R'$ and $I'$ with $I^{k-1} = 0$. In particular, it holds for $R' = R/I^{k-1}$, $I' = I/I^{k-1}$ and the image of $P$ in $R'$. Let $M' = IM, M'' = M/M'$. These are $R'$-modules and the claim holds for them. 
     Now consider the diagram,
     \begin{center}
         \begin{tikzcd}
@@ -3973,7 +3987,7 @@ In this subsection, we denote $X=\Spa A$ where $A$ is a Huber pair.
     $\:$
     \begin{enumerate}
         \item Every open covering $\U$ of $X$ has a refinement which is a rational covering.
-        \item Every covering sieve (i.e. $X=\bigcup_{U\in\sS}U$) of $X$ contains a rational sieve.
+        \item Every covering sieve (i.e., $X=\bigcup_{U\in\sS}U$) of $X$ contains a rational sieve.
     \end{enumerate}
 \end{proposition}
 
@@ -4137,7 +4151,7 @@ Under the assumption of $A$ being Tate, we have more convenient acyclicity crite
 
 \begin{proposition}
     \label{proposition_24_5}
-    In the situation of Definition \ref{definition_24_2}, assume $A$ (i.e $A^\triangleleft$) to be Tate. Then a sieve $\sS$ on $\Omega\in\Rat_X$ covers $\Omega$ if and only if $o_L(\sS)<\infty$.
+    In the situation of Definition \ref{definition_24_2}, assume $A$ (i.e., $A^\triangleleft$) to be Tate. Then a sieve $\sS$ on $\Omega\in\Rat_X$ covers $\Omega$ if and only if $o_L(\sS)<\infty$.
 \end{proposition}
 \begin{proof}
     The proof will work by showing that every rational sieve has finite $o_L$ which proves the claim by Proposition \ref{proposition_23_2} and \ref{fact_24_1} a.
@@ -4508,8 +4522,8 @@ We will assume that $\mathbb{K}$ is complete from now on.
     If $\ab{\mathbb{K}^\times}$ is not discrete in $(0,\infty)_\R$ and $\mathbb{K}$ has a dense countable subset then $\mathbb{K}$ is not spherically complete hence Hahn-Banach fials for normed $\mathbb{K}$-vectorspaces.
 \end{remark}
 
-\section{Affnoid $\mathbb{K}$-Algebra and Their Tate Spectrum}
-\subsection{Basic Properties of Affnoid $\mathbb{K}$-Algebras}
+\section{Affinoid $\mathbb{K}$-Algebra and Their Tate Spectrum}
+\subsection{Basic Properties of Affinoid $\mathbb{K}$-Algebras}
 Let $\mathbb{K}$ be a complete field with respect to a non-discrete ultrametric absolute value $\ab{\cdot}$. The extension o $\ab{\cdot}$ to any algebraic field extensio nof $K$ will also be denoted by $\ab{\cdot}$.
 \begin{definition}
     \label{definition_29_1}
@@ -4641,6 +4655,238 @@ Obviously this is $\mathbb{K}\langle X_1,\cdots,X_n\rangle$ as a nat ring.
     \end{equation*}
     is an isometric $\mathbb{K}$-isomorphism of $\mathbb{K}$-algebraof $\mathbb{T}_n$ onto itself, and such that all $\varphi(f_i)$ are $(\mathbb{T}_n,X_n)$-distinguished in $\mathbb{T}_n\cong \mathbb{T}_{n-1}\langle X_n\rangle$.
 \end{lemma}
+
+%11/2
+
+\begin{proof}
+  Note that for every change of a sign in $\pm$, there is a unique non-expansive ($\norm{\varphi|\T_n}\leq \norm{x|\T_n}$) endomorphism $\varphi:\T_n\to \T_n$ of $\K$-algebra such that 
+  \begin{equation*}
+    \varphi(X_i)=\begin{cases}
+      X_n,\quad(i=n),\\
+      X_i\pm X_n^{k_i},\quad (1\leq i<n).
+    \end{cases}
+  \end{equation*}
+  where the $k_i$, are as in the Lemma \ref{lemma_29_1_1}. Indeed, there is an endomorphism $\varphi$ of $\K[X-1,\cdots,X_n]$ with the above behaviour on the $X_i$ and every coefficient of $\varphi(P)$ is a $\Z$-linear combination of coefficient of $P_i$ such that 
+  \begin{equation*}
+  \norm{\varphi(P)|\T_n}\leq\norm{P|\T_n},
+  \end{equation*}
+  for all $P\in K[X_1,\cdots,X_n]$. As $\T_n$ is the completion of $\K[X_1,\cdots,X_n]$, with respect to $\norm{\cdot\vert\T_n}$, $\varphi$ extends in a unique way to endomorphism of $\T_n$ with the same properties. 
+  On $\K[X_1,\cdots,X_n]$ an inverse to $\varphi$ is given in the same way with every sign $\pm$, changed to its opposite $\mp$. By the density of $K[X_1,\cdots,X_n]$ in $\T_n$, the inverse to $\varphi_n$ as endomorphism of $\T_n$ is given in the same way. Thus, $\varphi$ is a morphism (respecting $\norm{\cdot\vert\T_n}$).
+  \par To prove the lemma, apply Lemma \ref{lemma_29_1_1} to 
+  \begin{equation*}
+    S = \{\alpha\in\N^n\sep \exists i\in 1,\cdots,m\text{ such that } \ab{f_{i,\alpha}}=\norm{\varphi_i\vert \T_n}\}.
+  \end{equation*}
+  Choosing the $k_i$ as in Lemma \ref{lemma_29_1_1}, and $\varphi$ as above, 
+  \begin{equation}
+    \varphi(X^d) = \pm X_n^{w(\vec{k},\vec{\alpha})}+(\text{$\mathbb{Z}$-linear combination of $X^\beta$ with $\beta_n<w(\vec{k},\vec{\alpha})$}).
+  \end{equation}
+  Therefore, if $\alpha\in\N^n$ is such that $\ab{f_{i,\alpha}}=\norm{f_i\vert \T_n}$ with $w(\vec{k},\vec{alpha})$ maximal in 
+  \begin{equation*}
+  \{w(\vec{k},\vec{\alpha})\sep \ab{f_{i,\beta}}=\norm{f_I\vert\T_n}\},
+  \end{equation*}
+  the coefficient of $X_n^{w(\vec{k},\vec{\alpha})},\varphi(f_i)$ is $\pm f_\alpha$ and all $\beta\in\N^n$ different from $(0,\cdots,0,w(\vec{k},\vec{\alpha}))$ hence $\beta_n<w(\vec{k},\vec{\alpha})$ or the coefficint of $X^\beta$ is $\varphi(f_i)$ as absolute value $\norm{f_i\vert\T_n}$. 
+  It follows that $\varphi(f_i)$ is $(\T_{n-1},X_n)$-distinguished of degree $w(\vec{k},\vec{\alpha})$.
+\end{proof}
+
+\begin{theorem}[Krull-Cohen-Seidenberg]
+  
+\end{theorem}
+
+\begin{theorem}
+    Let $A$ be a Noetherian domain and $a\in A\backslash\{0\}$. 
+\end{theorem}
+
+\begin{proposition}$\:$
+  \label{proposition_30_1}
+  \begin{enumerate}[1. ]
+    \item $\T_n$ is topologically Noetherian.
+    \item Every ideal of $\T_n$ is closed.
+    \item For every maximal ideal $\m$ of $\T_n$, $k(\T_n)=A/\m$ is a finite field extension of $\K$. (Therefore, $\ab{\cdot}$ has a unique extension to $k(\m)$ by Proposition 5.1.2).
+  \end{enumerate}
+  Moreover, $\mathfrak{n} = \m\cap\K[X_1,\cdots,X_n]$ is also a maximal ideal, and the canonical homomorphism theorem completion,
+  \begin{equation*}
+    \widehat{\K[X_1,\cdots,X_n]_\mathfrak{n}}\to \widehat{(\T_n)_{\m}},
+  \end{equation*}
+  is an isomorphism.
+  \begin{enumerate}
+    \setcounter{enumi}{3}
+    \item $\T_n$ is regular of dimension $n$, and $\mathrm{ht}(\m)=n$ for every maximal ideal $\m$ of $\T_n$.
+    \item $\T_n$ is a UFD.
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  All proofs are by induction on $n$, starting with $n=0$. This is safe for \textbf{2} which follows from \textbf{a} using Sheet 3 Problem 3, Proposition 3.6.2.
+  \par\textbf{1.} Let $I\subseteq\T_n$ be an ideal which we want to show to be topologically finitely generated. When $I=0$, then there is nothing to show. Otherwise, there is $f\in I\backslash\{0\}$. By Lemma \ref{lemma_29_1}, without loss of generality, $f$ is $(\T_{n-1},X_n)$-distinguished of degree $d\in\N$. By Proposition Proposition 3.5.1, $\T_n/f\T_n$ is a nat-$\T_{n-1}$-moudle which is isomorphic to $\T_{n-1}^d$. 
+  hence topologically Noetherian as a $\T_{n-1}$-module. It follows that $I/f\T_n$ equipped with the topology induced from $\T_{n-1}/f\T_n$ is topologically Noetherian, hence over $\T_n$ (every $\T_n$-submoule is a $\T_{n-1}$-submodule and topological generators over $\T_{n-1}$ remains so over $\T_n$). Also by Fact 1, $\T_n\stackrel{f}{\to}f\T_n$ is a homeomorphism when the target is equipped with induced topoloy. Thus $f\T$ is topologically finitely generated over $\T_n$ by $f$. Now 
+  \begin{equation*}
+    0\to f\T_n\to I\to I/f\T_n 
+  \end{equation*}
+  and Proposition 3.6.2 shows that $I$ is topologically finitely generated.
+  \par\textbf{3.} We apply the previous considerations to $I=\m$. Then $\m/f\T_{n-1}$ is a maximal ideal of $\T_n/f\T_n$. By the Krull-Cohen-Seidenberg theorem (applied to the finite ring extension $\T_n/f\T_n$ over $\T_{n-1}$), $\m'=\m\cap\T_{n-1}$ is a maximal ideal of $\T_{n-1}$ and its residue field is a finite field extension of $\K$. 
+  Since $\T_n/\m\cong(\T_n/f\T_n)/(\m/f\T_n)$ is a finitely generated vector space over $k(\m)$, (if $(X_i)_{i=0}^{d-1}$ generates $\T_n/f\T_n$ over $\T_{n-1}$, they generate $k(\m)$ over $k(\m')$), it is also a finite field extension of $\K$. For the rest of the proof for \textbf{3}, w eeshow for $\mathfrak{n} = \m\cap\K[X_1,\cdots,X_n]$, that 
+  \begin{equation}
+    \label{equation_plus}
+    K[X_1,\cdots,X_n]/\mathfrak{n}^l \stackrel{\simeq}{\to}\T_n/\m^l
+  \end{equation}
+  for all $l\in\N$ which when $l=1$ implies the rest of \textbf{3}. By \textbf{2}, $\m^l$ is a closed ideal in $\T_n$. Thus, the seminorm induced on the right hand side of Equation \eqref{equation_plus} (which is a quotient of $\T_n$) form $\norm{\cdot\vert\T_n}$. That is 
+  \begin{equation}
+    \norm{x\vert\T_n/\m^l}=\inf\{\norm{\xi\vert\T_n}\sep x=\xi\mod{\m^l}\}
+  \end{equation}
+  is a norm. By Proposition \ref{proposition_28_1}, Equation \eqref{equation_plus} is surjective as its image is dens (since $K[X_1,\cdots,X_n]$ is dense in $\T_n$). In the case of $l=1$, Equation \eqref{equation_plus} is injective due to the construction of $\mathfrak{n}$ showing that $\K[X_1,\cdots,X_n]/\mathfrak{n}\cong k(\mathfrak{m})$ and that $\mathfrak{n}$ is a maximal ideal. 
+  If $n=1$, then both sides of Equation \ref{equation_plus} are $\K$-vector spaces of dimeision $l[k(\m):\K]$ by Proposition \ref{proposition_29_1} and since $K[X_1]$ is also a PID 
+  and $(\T_n)_\m$ are regular local ring of the same dimension and with residue fields isomorphic as extensio nof $\K$ such that both sides of Equation \eqref{equation_plus} have the same dimension as $\K$-vector spaces. By the surjectivity of Equation \eqref{equation_plus} and the relation theorem of dimension and Hilbert polynomial, the dimension of $(\T_n)_\m$ is at most $n$ with equality holds if and only if Equation \eqref{equation_plus} is an isomorphism as $\K$-vector spaces.
+  \par By the injectivity of Equation \eqref{equation_plus}, there is a polynomial $Q$ of degree $n-1$ such that $\dim_\K(\mathfrak{n}^j/\mathfrak{n}^{j-1})=Q(j)$ and if $P\in \mathfrak{n}^{l-1}/\mathfrak{n}^l$ is in the kernel then 
+  \begin{equation*}
+    \dim(\mathfrak{n}^j/\mathfrak{m}^{j+1})\leq Q(j) - Q(j+1-l) (j>l),
+  \end{equation*}
+  showing that $\dim(\T_n)_\m<n$. Let $\mathfrak{m}_1=\m\cap\T_1$. Then $\K\subseteq\T_n/\m_1\subseteq k(\m)$ hence $\T_1/\m_1$ is a field and $\m_1$ a maximal ideal of $\T_1$, henc $\m=P\T_1$ where $P\in\T_1$ is a prime element, then $\T_n/P\cdot\T_n=\T_{n-1,k(\m_1)}$ showing that $P$ is still a prime element of $\T_n$ (as $\T_{n-1,k(\m_1)}$ is a domain). By the induction assumption, there is a chain 
+  \begin{equation*}
+    0=\mathfrak{q}_1\subsetneq \cdots\subsetneq \mathfrak{q}_{n-1} = \m/P\cdot\T_n\subseteq\T_n/P\cdot\T_n\cong\T_{n-1,k(\m_1)}.
+  \end{equation*}
+  of prime ideals in $\T_{n-1}$. Taking $\p_i$ to be the inverse image under $\T_n\to\T_n/P\T_n\cong \T_{n-1,k(\m_1)}$ gives us a chain,
+  \begin{equation*}
+    0\subsetneq \p_1\subsetneq\cdots\subsetneq  p_r=\m 
+  \end{equation*}
+  in $\T_1$ showing $\mathrm{ht}(\m) \geq n$ and completing the proof for \textbf{3}.
+  \par\textbf{4.} It follows from \textbf{3} as a Noetherian local ring is regular if and only if its completion is and $\K[X-1,\cdots,X_n]_\mathfrak{n}$ is known to be regular.
+  \par\textbf{5.} That it is a domain follows from the multiplicativity of the norm. To show that $\T_n$ is a UFD, we must show that every irreducible element is prime. This suffices to show the statement as we have already seen it is Noetherian by \textbf{1}. By the induction hypothesis, $\T_{n-1}[X_n]$ is a UFD. 
+  \begin{claim}
+  Let $P\in\T_{n-1}[T]$ be Weierstrass of degree $d$ (i.e., $P_d=1, i\leq d\Rightarrow P_i\in\T^\circ_{n-1}$). If $P$ is irreducible in $\T_n$, it is irreducible in $\T_{n-1}[T]$. 
+  \end{claim}
+  \begin{claimproof}
+  Let $f\in\T_n$ be irreducible and $g,h\in\T_n$ be such that $f\mid gh$. We must show that $f|g$ or $f|h$. By Lemma \ref{lemma_29_1}, without loss of generality, $f,g$, and $h$ are $(\T_{n-1},X_n)$-distinguished. By Corollary 3.5.1, again without loss of generality, $f,g$, and $h$ are Weierstrass polynomials. Let $f = \prod_{i=1}^np_i$ be a decomposition of $f$ into prime factors in $\T_{n-1}[X_n]$. Then possibly one of the $p_i$ say $p_1$ is a non-unit in $\T_n$. By Corolalry 3.5.1, we have $f\mid gh$ already holds in $\T_{n-1}[X_n]$. This implies $p_1\mid gh$, hence $p_1\mid g$ or $p_1\mid h$ as $\T_{n-1}[X_n]$ is a UFD and $p_1\mid g$ without loss of generality. Then $f\mid g$ in $\T_n$ as $f$ and $p_1$ are multiplicatively equivalent in $\T_n$.
+\end{claimproof}
+\par
+\end{proof}
+%11/5
+\begin{theorem}
+    \label{theorem_31_0}
+    Let $A$ be a Noetherian domain and $a$ be neither zero nor a unit. Then $a$ can be written as a finite product of irreducible elements.
+\end{theorem}
+\begin{proposition}
+    \label{fact_31_6}
+    For any spectral space $X$, the following conditions are equivalent.
+    \begin{enumerate}[i. ]
+        \item The set of closed poitns of $X$ is dense in every closed subset of $X$.
+        \item If $U\subseteq X$ is open and $x\in U$ closed in $U$, then $x$ is closed in $X$.
+        \item The open subsets $U\subseteq X$ with the property that every closed points of $U$ stays closed in $X$ form a topology base. 
+        \item The quasi-compact open open subsets $U\subseteq X$ with the property that every closed points of $U$ stays closed in $X$ form a topology base.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+    \label{fact_31_7}
+    For a discrete ring $R$ the following conditions are equivalent.
+    \begin{enumerate}[i.]
+        \item $\Spec R$ satisfies one of conditions in Proposition \ref{fact_31_6}.
+        \item For every $R$-algebra $S$ of finite type, the map $\Spec(S)\to\Spec(R)$ maps closed points to closed points.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proposition}$\:$
+    \label{fact_31_8}
+    \begin{enumerate}[1.]
+        \item Every algebra of finite type over a Jacobson ring is a Jacobson ring.
+        \item Let $R$ be a ring such that $\sqrt{0_R}=\mathfrak{J}(R)$ and all $R/aR$ for $a\not\in\sqrt{0_R}$ are Jacobson then $R$ is Jacobson.
+        \item For every ideal $I$ in a Jacobson ring $R$, $\sqrt{I}=\bigcap_{\substack{\mathfrak{m}\in\MaxSpec R\\ I\subseteq\m}}\mathfrak{m}$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{remark}
+    Proposition \ref{fact_31_8}.3 is a version of a version of the Noetheriannes.
+\end{remark}
+
+\begin{proposition}
+    \label{proposition_31_3}
+    $\T_n$ is a Jacobson ring.
+\end{proposition}
+
+\begin{proof}
+    Induction on $n$ as usual. When $n=0$, then $\T_n=\K$ is Jacobson as it is a field. Otherwise, we apply Proposition \ref{fact_31_8}.1 and the induction hypothesis. 
+    Since $\mathfrak{J}(\T_n) = \{0\}=\sqrt{0_{\T_n}}$ by Proposition \ref{fact_29_5} it remains to show that $\T_n/f\T_n$ is Jacobson for $f\in\T_n\backslash\{0\}$. 
+    By Lemma \ref{lemma_29_1}, without loss of generality, $f$ is $(\T_{n-1},X_n)$-distinguished. Then by Proposition \ref{proposition_26_1}, $\T_n/f\T_n$ is finite hence of finite degree over $\T_{n-1}$ hence Jacobson by Proposition \ref{fact_31_8}.1 and by the induction hypothesis.
+\end{proof}
+
+\begin{definition}
+    \label{definition_31_3}
+    An affinoid $\K$-algebra is a $\K$-algebra $A$ for which there exists an isomorphism of $\K$-algebra $A\cong \T_n/I$ for some $n\in\N$ and ideal $I\subseteq\T_n$. We denote the isomorphism by $\varphi_I:A\to \T_n/I$.
+\end{definition}
+\begin{remark}
+    In particular, no topology is currently fixed as affinoid $\K$-algebra at this point is just an ordinary $\K$-algebra of a certain kind.
+    The category of affinoid $\K$-algebra is the full subcategory of the $\K$-algebra where objects are affinoid algebras.
+\end{remark}
+
+\begin{remark}
+    Our notions here coincide with \cite{BGR} Definition 6.1.1.1. (Professor Franke thinks the lecture note of Bosch uses the same notions). Unfortunately, Scholze (Perfectoid spaces) and Kedlaya seem to use "affinoid $\K$-algebra differently. Professor Franke thiks for them it is a Huber pair $(A^\triangleleft,A^+)$ with a morphism $(\K,\K^\circ)\to (A^\triangleleft,A^+)$ and a $\K$-Banach algebra norm on $A^\triangleleft$ may also be required and in this context, it will unlikely be uniquely determined by the algebraic structure even up to equivalence.
+\end{remark}
+
+\begin{proposition}
+    \label{fact_31_9}
+    Every affinoid $\K$-algebra is a Noetherian and universally catenary ($\T_n$ being regular) Jacobson ring. For every maximal ideal $\m$ of $A$ $A/\m$ is a finite field extension of $\K$.
+\end{proposition}
+
+\begin{remark}
+    Every Cohen-Macaully ring (in particular, every regular ring) is universally catenary. See the theory of CM rings in Matsumura. Since $\T_n/I$ is of finite type over $\T_n$ and $\T_n$ universally catenary so is $\T_n/I$. 
+\end{remark}
+
+\begin{definition}
+    \label{definition_31_4}
+    The residual norm on an affinoid $\K$-algebra $A$ with respect to the isomorphism $\varphi_I:A\to\T_n/I$ is 
+    \begin{equation*}
+        \norm{a|A}\defeq\inf\{\norm{t|\T_n}\sep \text{$t$ is in the preimage of $a$ in the isomorphism}\}.
+    \end{equation*}
+    The spectral norm is 
+    \begin{equation*}
+        \norm{a|A}_s=\defeq \lim_{j\to\infty}\sqrt[j]{\norm{a^j|A}}.
+    \end{equation*}
+    A morphism $A\stackrel{\beta}{\to}B$ of affinoid $\K$-algebra is called non-expansive with respect to the residue norm $\norm{\cdot|A}$ and $\norm{\cdot|B}$ if 
+    \begin{equation*}
+        \forall a\in A,\norm{\beta(a)|B}\leq\norm{a|A}.
+    \end{equation*}
+\end{definition}
+\begin{remark}
+    In Definition \ref{definition_31_4}, as $I$ is closed by Proposition 2, thisis a norm not just a seminorm.
+\end{remark}
+
+\begin{remark}
+    By 3.7.3 in Proposition 3.7.1 (not just in the lecture), $\norm{\cdot}_s$ is well-defined and a power multiplicative seminorm. We will eventually see that $\norm{\cdot}_s$ does not depend on the choice of residue norm (and thus not on the isomorphism of $\varphi_I:A\to \T_n/I$). 
+\end{remark}
+
+\begin{proposition}
+    \label{fact_31_10}
+    Two residual norms on a finite dimensional $\K$-algebra are equivalent and every morphism $A\stackrel{\beta}{\to}B$ is continuous if one of $A$ or $B$ is finite dimansional.
+\end{proposition}
+\begin{proof}
+    For $\dim A< \infty$, consider $\norm{a|A}+\norm{\beta(a)|A}$ on $A$. It must be equivalent to $\norm{\cdot|A}$ by Proposition 5.1.1.
+    If $\dim B<\infty$, let $B' = \image(\beta)$, and equip it with $\norm{\cdot|B}$ and 
+    \begin{equation*}
+        \norm{b|B'} = \inf\{\norm{a|A}\sep \forall a\in A, \beta(a) = b\},
+    \end{equation*}
+    which is a norm as $\ker(\beta)$ is closed in $A$ (its preimage under the chosen isomorphism $\varphi_I:A\to \T_n/I$ is closed and $A$ has the quotient topology from the isomorphism). Since these two norms are equivalent by Proposition 5.1.1, $\beta$ is automatically continuous in this situation as well.
+\end{proof}
+
+\begin{proposition}
+    \label{fact_31_11}
+    if the morphism $A\stackrel{f}{\to}B$ between affinoid $\K$-algebras is continuous with respect to the topology defined by residual norms $\norm{\cdot|A},\norm{\cdot|B}$, then there is $C\in[0,\infty)_\R$ such that 
+    \begin{equation*}
+        \forall a\in A,\norm{f(a)|B}\leq C\norm{a|A}.
+    \end{equation*}
+\end{proposition}
+
+\begin{proof}
+    $f^{-1}(\{\norm{b|B}\sep \norm{b}\leq 1\})$ must be a neighborhood of $0$ in $A$, hence there is $\varepsilon\in\K^\times$ such that it contains 
+    \begin{equation*}
+        \{a\in A\sep \norm{a|A}\leq \ab{\varepsilon}\}.
+    \end{equation*}
+    Then $C={\frac 1 {\ab{\varepsilon}}}$ can be taken. If $a\in A$ and $n\in(\norm{a|A},\infty)_\R$, there is $t\in\T_n$ with image a under the isomorphism $A\cong\T_n/I$ and $\norm{t|\T_n}<n$. If $a\not=0$, then there is $\upsilon\in\K^\times$ such that $\ab{\upsilon}=\norm{t|\T_n}$ hence $\norm{f|A}\leq \ab{\upsilon}$ and 
+    \begin{equation*}
+        \left\Vert f\left({\frac {\varepsilon a} {\upsilon}}\right)\bigg{\vert}B\right\Vert \leq 1.
+    \end{equation*}
+    Then $\norm{f(a)}\leq Cn$ and since this holds for all $n>\norm{a|A}$, we obtain 
+    \begin{equation*}
+        \norm{f(a)|B}\leq C\norm{a|A}.
+    \end{equation*}
+\end{proof}
 
 \begin{thebibliography}{9}
 \bibitem{Huber}
